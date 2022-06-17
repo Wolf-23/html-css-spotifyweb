@@ -5,9 +5,68 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css">
-        <title>Document</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />        <title>Spotify Web</title>
     </head>
     <body>
-        
+        <main>
+            <div class="main-container"> 
+            <div class="sidebar">
+
+            </div>
+            <div class="content">
+                <div class="fake-header">
+
+                </div>
+                <div class="music">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div>
+            </div>
+        </div>
+        </main>
+        <footer>
+            <div class="footer-container flex p-10">
+                <div class="footer-item flex w-25">
+                    <img src="img/sinister.jpeg" alt="Sinister Cover">
+                    <div class="song-play">
+                        <strong class="band white-text">Linkin Park</strong>
+                        <span class="title">In The End</span>
+                    </div>
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-folder"></i>
+                </div>
+                <div class="footer-item player-wrapper w-50">
+                    <div class="player flex">
+                        <i class="fa-solid fa-shuffle"></i>
+                        <i class="fa-solid fa-backward-step"></i>
+                        <i class="fa-regular fa-circle-play"></i>
+                        <i class="fa-solid fa-forward-step"></i>
+                        <i class="fa-solid fa-arrow-rotate-right"></i>
+                    </div>
+                    <div class="progress-wrapper flex">
+                        <span class="white-text">0.25</span>
+                        <div class="progress-bar inline-block">
+                            <div class="in-play"></div>
+                        </div>
+                        <span class="white-text">4.35</span>
+                    </div>
+                </div>
+                <div class="footer-item flex w-25 volume-wrapper">
+                    <i class="fa-solid fa-list"></i>
+                    <i class="fa-solid fa-display"></i>
+                    <i class="fa-solid fa-volume-high"></i>
+                    <div class="progress-bar inline-block volume">
+                        <div class="in-play"></div>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
