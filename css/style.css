@@ -20,6 +20,12 @@
 body {
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
 }
 
 .main-container {
@@ -29,40 +35,38 @@ body {
 footer {
     height: 80px;
     background-color: var(--footer-color);
+    z-index: 10;
 }
 
 .sidebar {
-    width: 15vw;
+    width: 225px;
     height: 100%;
     background-color: var(--side-color);
+    flex-shrink: 0;
 }
 
 .content {
-    width: 85vw;
+    width: calc(100% - 225px);
     height: 100%;
     background-color: var(--main-color);
-    overflow: auto ;
+    overflow: auto;
     position: relative;
 }
 
 .fake-header {
     background-color: var(--header-color);
     height: 100px;
-    width: 85vw;
+    width: calc(100% - 225px);
     position: fixed;
     top: 0;
+    left: 225px;
+    z-index: 10;
 }
 
 .music {
     margin-top: 100px;
 }
 
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    margin: 1rem;
-}
 
 /* Regole Generali */
 
@@ -86,6 +90,10 @@ html {
     padding: 10px;
 }
 
+.p-20 {
+    padding: 20px;
+}
+
 .w-25 {
     width: 25%;
 }
@@ -102,10 +110,65 @@ html {
     display: block;
 }
 
+.none {
+    display: none;
+}
+
 
 /******** Style Page ********/
 
 /* Main */
+
+/* Sidebar */
+
+.sidebar-top {
+    width: 100%;
+    height: calc(100% - 100px);
+}
+
+.sidebar-bottom {
+    width: 100%;
+    height: 100px ;
+    background-color: #fff;
+}
+
+.logo {
+    width: 70%;
+}
+
+.sidebar ul {
+    list-style: none;
+    flex-direction: column;
+}
+
+.sidebar ul li a img {
+    width: 20px;
+    margin-right: 5px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: var(--grey-light);
+    align-items: center;
+    font-size: 8px;
+    font-weight: 600;
+}
+
+.sidebar ul li {
+  padding-left: 20px;
+  margin-bottom: 5px;
+}
+
+.sidebar ul li:first-child {
+    border-left: 2px solid rgb(128, 248, 128);
+    padding-left: 18px;
+}
+
+
+
+
+
+
 
 /* Fake Header */
 
@@ -124,15 +187,13 @@ html {
     text-decoration: none;
     border-radius: 50px;
     border: 1px solid #fff;
-    margin-right: 30px;
+    margin-right: 40px;
 }
 
 /* Music */
 
 .music .music-list{
-    margin: auto;
-    max-width: 80%;
-    margin-bottom: 30px
+    margin: 0 auto 30px;
 }
 
 .music .music-list ul{
@@ -176,9 +237,6 @@ html {
 
 .music-item {
     width: calc((100% / 6) - 20px);
-}
-
-.music-item {
     margin: 0 10px;
 }
 
@@ -234,7 +292,7 @@ html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 
@@ -247,6 +305,7 @@ html {
 
 .footer-item{
     height: 100%;
+    width: 100%;
     align-items: center;
 }
 
@@ -271,7 +330,7 @@ html {
 
 .footer-item i {
     color: var(--grey-light);
-    padding: 7px;
+    padding: 4px;
 }
 
 .footer-item .player {
@@ -341,6 +400,10 @@ html {
 
 /* Hover */ 
 
+.fake-header .btn-container a:hover {
+    transform: scale(1.1);
+}
+
 .music-list ul li a:hover {
     color: #fff;
 }
@@ -379,18 +442,76 @@ footer .player-wrapper .player .fa-circle-play:hover {
 
 /* Medium mg */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
+
+    .playlist {
+        flex-wrap: wrap;
+    }
     
+    .playlist .music-item {
+        width: calc((100% / 4) - 20px);
+    }
+
+    .music .music-list {
+        margin: 0;
+    }
+
+    .music-list ul {
+        flex-wrap: wrap;
+    }
+
+    .music-list ul li{
+       margin-bottom: 30px;
+    }
+
+    .recently h1 {
+        margin-top: 0;
+    }
+
+  
 }
 
 /* Small s */
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
+
+    .playlist .music-item {
+        width: calc((100% / 2) - 20px);
+    }
+
+    .footer-item .icon {
+        display: block;
+    }
+
+    .footer-item .icon i {
+        padding: 5px;
+    }
+
+    .footer-item .song-play {
+        margin-right: 10px;
+    }
 
 }
 
 /* Extra-Small xs */
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 576px) {
+   
+    .sidebar {
+        width: 70px;
+    }
+
+    .content {
+        width: calc(100vw - 70px);
+    }
+
+    .fake-header {
+        width: calc(100vw - 70px);
+        left: 70px;
+    }
+
+    .footer-item .player i {
+        padding: 0 8px;
+    }
    
 }
