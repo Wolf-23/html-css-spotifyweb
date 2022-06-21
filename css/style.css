@@ -7,6 +7,7 @@
 }
 
 /* Regole di Root */
+
 :root {
     --main-color: #141922;
     --side-color: #000000; 
@@ -157,7 +158,7 @@ html {
 }
 
 .sidebar-menu ul li:first-child {
-    border-color: rgb(173, 241, 84);
+    /* border-color: rgb(173, 241, 84); */
 }
 
 .sidebar-list a {
@@ -196,6 +197,7 @@ html {
     font-weight: 600;
     color: var(--grey-light);
     font-size: 12px;
+    cursor: pointer;
 }
 
 .side-playlist h2 {
@@ -255,9 +257,7 @@ html {
     font-weight: 700;
 }
  
-
 /* Fake Header */
-
 
 .btn-container {
     width: 100%;
@@ -315,7 +315,6 @@ html {
 .artists h1 {
     margin: 10px 10px;
 }
-
 
 .playlist {
     width: 100%;
@@ -381,7 +380,6 @@ html {
     font-size: 3rem;
 }
 
-
 /* Footer */
 
 .footer-container {
@@ -434,11 +432,11 @@ html {
 }
 
 .footer-item  .progress-bar {
-   height: 4px;
-   border-radius: 50px;
-   width: 70%;
-   background-color: #5A5A5A;
-   margin: 0 10px;
+    height: 4px;
+    border-radius: 50px;
+    width: 70%;
+    background-color: #5A5A5A;
+    margin: 0 10px;
 }
 
 .footer-item .in-play-bar {
@@ -484,12 +482,20 @@ html {
     width: 40%;
 }
 
-/* Hover */ 
+/* Hover and Active Effects*/ 
+
+/* Sidebar Hover */
 
 .sidebar-list li:hover span,
 .side-playlist ul li:hover,
 .plus-btn:hover {
     color: #fff;
+}
+
+.sidebar-list li:active span,
+.side-playlist ul li:active,
+.plus-btn:active {
+    color: rgb(128, 248, 128);;
 }
 
 .sidebar-list li:hover .img-grey {
@@ -504,22 +510,40 @@ html {
     color: #fff;
 }
 
+.sidebar-menu ul li:hover {
+    border-left: 3px solid rgb(128, 248, 128);
+}
+
+/* Fake Header Hover */
+
 .fake-header .btn-container a:hover {
     transform: scale(1.1);
+    color: rgb(128, 248, 128);
 }
+
+/* Music Hover */
 
 .music-list ul li a:hover {
     color: #fff;
+    padding-bottom: 2px;
+    border-bottom: 2px solid rgb(128, 248, 128);
 }
 
 .music-item .img-wrapper:hover .overlay {
     display: block;
+    cursor: pointer;
+}
+
+.music-item .img-wrapper:active .overlay i{
+    color: rgb(128, 248, 128);
 }
 
 .artists .music-item .img-wrapper:hover .overlay {
     display: inline-block;
     border-radius: 50%;
 }
+
+/* Footer Hover */
 
 footer .song-play .title:hover {
     color: #fff;
@@ -540,6 +564,10 @@ footer .footer-item .in-play-bar:hover i {
 
 footer .player-wrapper .player .fa-circle-play:hover {
     transform: scale(1.1);
+}
+
+footer .player-wrapper .player i:hover {
+    color: rgb(128, 248, 128);
 }
 
 /* Media Query */
@@ -572,7 +600,6 @@ footer .player-wrapper .player .fa-circle-play:hover {
         margin-top: 0;
     }
 
-  
 }
 
 /* Small s */
@@ -672,5 +699,5 @@ footer .player-wrapper .player .fa-circle-play:hover {
     .footer-item .player i {
         padding: 0 8px;
     }
-   
+
 }
