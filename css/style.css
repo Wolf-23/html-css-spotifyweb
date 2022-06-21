@@ -36,6 +36,7 @@ footer {
     height: 80px;
     background-color: var(--footer-color);
     z-index: 10;
+    position: relative;
 }
 
 .sidebar {
@@ -43,6 +44,8 @@ footer {
     height: 100%;
     background-color: var(--side-color);
     flex-shrink: 0;
+    min-height: 400px;
+    overflow: hidden;
 }
 
 .content {
@@ -122,53 +125,136 @@ html {
 /* Sidebar */
 
 .sidebar-top {
-    width: 100%;
     height: calc(100% - 100px);
-}
-
-.sidebar-bottom {
-    width: 100%;
-    height: 100px ;
-    background-color: #fff;
-}
-
-.logo {
-    width: 70%;
-}
-
-.sidebar ul {
-    list-style: none;
     flex-direction: column;
 }
 
-.sidebar ul li a img {
-    width: 20px;
-    margin-right: 5px;
+.sidebar-bottom {
+    height: 100px;
+    padding: 0 23px;
 }
 
-.sidebar ul li a {
-    text-decoration: none;
+.logo {
+    flex-shrink: 0;
+    padding: 10px 20px;
+}
+
+.logo img {
+    width: 70%;
+}
+
+.sidebar-menu {
+    margin-bottom: 20px;
+}
+
+.sidebar-menu .img-grey {
+    opacity: 0.5;
+}
+
+.sidebar-menu ul li {
+    padding: 4px 20px;
+    border-left: 3px solid transparent;
+}
+
+.sidebar-menu ul li:first-child {
+    border-color: rgb(173, 241, 84);
+}
+
+.sidebar-list a {
     color: var(--grey-light);
+    text-decoration: none;
+    display: flex;
     align-items: center;
-    font-size: 8px;
+    font-size: 12px;
     font-weight: 600;
 }
 
-.sidebar ul li {
-  padding-left: 20px;
-  margin-bottom: 5px;
+.sidebar-list .active {
+    color: #fff;
 }
 
-.sidebar ul li:first-child {
-    border-left: 2px solid rgb(128, 248, 128);
-    padding-left: 18px;
+.sidebar-list span {
+    padding-left: 5px;
 }
 
+.sidebar-list img {
+    width: 30px;
+}
 
+.side-playlist {
+    flex-direction: column;
+    overflow: hidden;
+    padding-left: 23px;
+}
 
+.side-playlist ul {
+    overflow-y: auto;
+}
 
+.side-playlist ul li {
+    padding: 8px 0;
+    font-weight: 600;
+    color: var(--grey-light);
+    font-size: 12px;
+}
 
+.side-playlist h2 {
+    font-size: 12px;
+    padding-bottom: 10px;
+}
 
+.plus-btn {
+    color: var(--grey-light);
+    text-decoration: none;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.plus-btn span {
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+.plus-btn i{
+   font-size: 30px;
+   background-color: var(--grey-light);
+   width: 30px;
+   height: 30px;
+   text-align: center;
+   color: black;
+}
+
+.download {
+    border-bottom: 2px solid var(--grey-light);
+    padding: 15px 0;
+    font-size: 12px;
+    color: var(--grey-light);
+    font-weight: 700;
+}
+
+.download i {
+    padding-right: 5px;
+}
+
+.user {
+    align-items: center;
+    padding-top: 10px;
+}
+
+.user img {
+    width: 25px;
+    height: 25px;
+    background-color: var(--grey-light);
+    border-radius: 50%;
+}
+
+.user span {
+    color: #fff;
+    padding-left: 10px;
+    font-size: 14px;
+    font-weight: 700;
+}
+ 
 
 /* Fake Header */
 
@@ -391,7 +477,7 @@ html {
 
 .footer-item.volume-wrapper i{
     color: #fff;
-    font-size: small
+    font-size: small;
 }
 
 .footer-item .volume {
@@ -399,6 +485,24 @@ html {
 }
 
 /* Hover */ 
+
+.sidebar-list li:hover span,
+.side-playlist ul li:hover,
+.plus-btn:hover {
+    color: #fff;
+}
+
+.sidebar-list li:hover .img-grey {
+    opacity: 1;
+}
+
+.plus-btn:hover i {
+    background-color: #fff;
+}
+
+.download:hover {
+    color: #fff;
+}
 
 .fake-header .btn-container a:hover {
     transform: scale(1.1);
@@ -484,7 +588,7 @@ footer .player-wrapper .player .fa-circle-play:hover {
     }
 
     .footer-item .icon i {
-        padding: 5px;
+        padding: 2px 4px;
     }
 
     .footer-item .song-play {
@@ -498,16 +602,71 @@ footer .player-wrapper .player .fa-circle-play:hover {
 @media screen and (max-width: 576px) {
    
     .sidebar {
-        width: 70px;
+        width: 50px;
+    }
+
+    .sidebar span {
+        display: none;
+    }
+
+    .sidebar-menu ul li {
+        border: none;
+        padding: 5px 0px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .side-playlist {
+        display: none;
+    }
+
+    .sidebar-bottom {
+        padding: 0px;
+    }
+
+    .sidebar-list img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .user {
+        justify-content: center;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .logo-mobile {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .logo-small {
+        display: block;
+        width: 50%;
+        padding-bottom: 15px;
+    }
+
+    .download {
+        border: none;
+        display: flex;
+        justify-content: center;
+    }
+
+    .download i {
+        padding-right: 0;
+        font-size: 12px;
     }
 
     .content {
-        width: calc(100vw - 70px);
+        width: calc(100vw - 50px);
     }
 
     .fake-header {
-        width: calc(100vw - 70px);
-        left: 70px;
+        width: calc(100vw - 50px);
+        left: 50px;
     }
 
     .footer-item .player i {

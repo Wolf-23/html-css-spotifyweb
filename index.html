@@ -11,35 +11,61 @@
         <main>
             <div class="main-container flex"> 
                 <div class="sidebar">
-                    <div class="sidebar-top">
-                        <div class="side-top-wrapper">
-                            <img class="logo p-20" src="img/logo.svg" alt="Spotify Logo">
-                            <img class=' logo none' src="img/logo-small.svg" alt="Spotify Logo logo-small">
-                            <ul class="flex">
+                    <div class="sidebar-top flex">
+                        <div class="logo">
+                            <img class="logo-big" src="img/logo.svg" alt="Spotify Logo">
+                        </div>
+                        <div class="logo-mobile">
+                            <img class="logo-small none" src="img/logo-small.svg" alt="Spotify Logo">
+                        </div>
+                        <div class="sidebar-menu">
+                            <ul class="white-text sidebar-list">
                                 <li>
-                                    <a class="flex" href="#">
-                                        <img src="img/home.svg" alt="Home">
-                                        <span class="white-text">Home</span>
+                                    <a class="active" href="#">
+                                        <img src="img/home.svg" alt="Vai alla Home">
+                                        <span>Home</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="flex" href="#">
-                                        <img src="img/search.svg" alt="Cerca">
+                                    <a href="#">
+                                        <img class="img-grey" src="img/search.svg" alt="Cerca">
                                         <span>Cerca</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="flex" href="#">
-                                        <img src="img/libreria.svg" alt="Libreria">
-                                        <span>La Tua Libreria</span>
+                                    <a href="#">
+                                        <img class="img-grey" src="img/libreria.svg" alt="Vai alla libreria">
+                                        <span>La tua libreria</span>
                                     </a>
                                 </li>
                             </ul>
-                        
-                        
+                        </div>
+                        <div class="side-playlist flex">
+                            <h2 class="white-text">PLAYLIST</h2>
+                            <a class="plus-btn flex" href="#">
+                                <i class="fa-light fa-plus"></i>
+                                <span>Crea Playlist</span> 
+                            </a>
+                            <ul class="white-text">
+                                <li>Nome Playlist</li>
+                                <li>Nome Playlist</li>
+                                <li>Nome Playlist</li>
+                                <li>Nome Playlist</li>
+                                <li>Nome Playlist</li>
+                                <li>Nome Playlist</li>
+                                <li>Nome Playlist</li>
+                            </ul>
                         </div>
                     </div>
                     <div class="sidebar-bottom">
+                        <div class="download">
+                            <i class="fa-regular fa-circle-down"></i>
+                            <span>Installa App</span>
+                        </div>
+                        <div class="user flex">
+                            <img src="img/profile.svg" alt="La tua foto profilo">
+                            <span>John Doe</span>
+                        </div>
                     </div>
                 </div>
                 <div class="content">
