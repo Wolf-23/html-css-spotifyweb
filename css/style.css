@@ -157,10 +157,6 @@ html {
     border-left: 3px solid transparent;
 }
 
-.sidebar-menu ul li:first-child {
-    /* border-color: rgb(173, 241, 84); */
-}
-
 .sidebar-list a {
     color: var(--grey-light);
     text-decoration: none;

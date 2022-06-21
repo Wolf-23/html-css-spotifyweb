@@ -8,9 +8,12 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />        <title>Spotify Web</title>
     </head>
     <body>
+        <!-- Main -->
         <main>
             <div class="main-container flex"> 
+                <!--Sidebar  -->
                 <div class="sidebar">
+                    <!-- Sidebar Top -->
                     <div class="sidebar-top flex">
                         <div class="logo">
                             <img class="logo-big" src="img/logo.svg" alt="Spotify Logo">
@@ -40,6 +43,7 @@
                                 </li>
                             </ul>
                         </div>
+                        <!-- Sidebar Playlist -->
                         <div class="side-playlist flex">
                             <h2 class="white-text">PLAYLIST</h2>
                             <a class="plus-btn flex" href="#">
@@ -57,6 +61,7 @@
                             </ul>
                         </div>
                     </div>
+                    <!-- Sidebar Bottom -->
                     <div class="sidebar-bottom">
                         <div class="download">
                             <i class="fa-regular fa-circle-down"></i>
@@ -68,13 +73,16 @@
                         </div>
                     </div>
                 </div>
+                <!-- Content -->
                 <div class="content">
+                    <!-- Fake Header -->
                     <div class="fake-header">
                         <div class="btn-container flex">
                             <a href="#" class="upgrade white-text">EFFETTUA L'UPGRADE</a>
                         </div>
                     </div>
                     <div class="music p-10">
+                        <!-- Music List -->
                         <div class="music-list">
                             <ul class="flex">
                                 <li><a href="#">In Evidenza</a></li>
@@ -85,6 +93,7 @@
                                 <li><a href="#">Scopri</a></li>
                             </ul>
                         </div>
+                        <!-- Sezione Recenti -->
                         <div class="recently">
                             <h1 class="white-text">Recently Played</h1>
                             <div class="playlist flex">
@@ -150,8 +159,9 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Sezione Creati per te -->
                         <div class="created">
-                            <h1 class="white-text">Creato per Hohn Doe</h1>
+                            <h1 class="white-text">Creato per John Doe</h1>
                             <span class="music-title block">Più ascolti, più accurati saranno i suggerimenti</span>
                             <div class="playlist flex">
                                 <div class="music-item">
@@ -173,7 +183,8 @@
                                     <h3 class="group white-text">Daily Mix 1</h3>
                                 </div>
                             </div>   
-                        </div>  
+                        </div>
+                        <!-- Sezione Artisti Popolari -->
                         <div class="artists">
                             <h1 class="white-text">Artisti più popolari</h1>
                             <span class="music-title block">Più ascolti, più accurati saranno i suggerimenti</span>
@@ -202,8 +213,10 @@
                 </div>
             </div>
         </main>
+        <!-- Footer -->
         <footer>
             <div class="footer-container flex p-10">
+                <!-- Footer Left -->
                 <div class="footer-item in-play flex ">
                     <img src="img/sinister.jpeg" alt="Sinister Cover">
                     <div class="song-play">
@@ -215,6 +228,7 @@
                         <i class="fa-regular fa-folder"></i>
                     </div>
                 </div>
+                <!-- Footer Player -->
                 <div class="footer-item player-wrapper ">
                     <div class="player flex">
                         <i class="fa-solid fa-shuffle"></i>
@@ -233,6 +247,7 @@
                         <span class="white-text">4.35</span>
                     </div>
                 </div>
+                <!-- Footer Right -->
                 <div class="footer-item flex w-25 volume-wrapper">
                     <i class="fa-solid fa-list"></i>
                     <i class="fa-solid fa-display"></i>
